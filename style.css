@@ -1,0 +1,114 @@
+:root {
+
+    /* Primary Colors */
+    --clr-hsl-violet: 263, 55%, 52%;
+    --clr-hsl-dark-gray-blue: 217, 19%, 35%;
+    --clr-hsl-dark-black-blue: 219, 29%, 14%;
+    --clr-hsl-white: 0, 0%, 100%;
+
+
+    /* Secondary Colors */
+    --clr-hsl-light-gray: 0, 0%, 81%;
+    --clr-hsl-light-blue: 210, 46%, 95%;
+
+    /* 1. "Verified Graduate" has the same color as the person's name with 50% opacity
+ 2. Review paragraphs inside the quotations have the same color as well,
+    but are at 70% opacity */
+
+    /* Typography */
+
+    --ff-body: 'Barlow Semi Condensed', sans-serif;
+
+    --fw-m: 500;
+    --fw-l: 600;
+
+    --fs-s: 0.8125rem;
+
+    /* Others */
+
+    --spacing-xxs: 0.25rem;
+    --spacing-xs: 0.5rem;
+    --spacing-s: 0.75rem;
+    --spacing-m: 1rem;
+    --spacing-l: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-xxl: 2.25rem;
+    --spacing-xxxl: 2.5rem;
+
+    --brd-radius: 0.5rem;
+
+
+    /* Responsive */
+    --padding-sides-responsive: 1.5rem;
+    --padding-top-bottom-responsive: 4.5rem;
+    --grid-gap-responsive: 1.5rem;
+    --max-width: 31.25rem;
+
+
+    /* Desktop */
+
+    /* [Make Responsive] Padding sides Card to Body 10.25remrem */
+    /* [Make Responsive] Padding top-bottom Card to body 10.25rem */
+    /* [Make Responsive] Gap between cards 1.875rem */
+
+    /* Padding inside card 2rem */
+    /* Name to Main P 1.125rem */
+    /* Main P to Secondary P 1rem (except the first one) */
+
+    /* --fs name 13px */
+    /* --fs Verified 11px */
+    /* --fs Main P 20px */
+    /* --fs Secondary P 13px */
+
+    /* --fw name  500*/
+    /* --fw Verified  500*/
+    /* --fw Main P 600 */
+    /* --fw Secondary P 500 */
+
+
+
+    /* Mobile */
+
+    /* [Make Responsive] Padding sides Card to Body 1.5rem */
+    /* [Make Responsive] Padding top-bottom Card to body 4.5rem */
+    /* [Make Responsive] Gap between cards 1.5rem */
+
+    /* Padding inside card 2rem */
+    /* Name to Main P 1.125rem */
+    /* Main P to Secondary P 1rem (except the first one) */
+
+    /* --fs name 13px */
+    /* --fs Verified 11px */
+    /* --fs Main P 20px */
+    /* --fs Secondary P 13px */
+
+    /* --fw name  500*/
+    /* --fw Verified  500*/
+    /* --fw Main P 600 */
+    /* --fw Secondary P 500 */
+
+
+
+
+
+}
+
+/* Global Styles */
+
+/* Utility Styles */
+
+/* Article Styles */
+
+
+/* Hover */
+
+/* Media Query */
+
+@media (width >=900px) {
+    :root {
+        --padding-sides-responsive: 10.25rem;
+        --padding-top-bottom-responsive: 10.25em;
+        --grid-gap-responsive: 1.875rem;
+        --max-width: 69.375rem;
+    }
+}
