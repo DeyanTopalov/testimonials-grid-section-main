@@ -8,12 +8,14 @@
 
 
     /* Secondary Colors */
+    --clr-hsl-light-violet: 264, 82%, 70%;
     --clr-hsl-light-gray: 0, 0%, 81%;
     --clr-hsl-light-blue: 210, 46%, 95%;
 
     /* 1. "Verified Graduate" has the same color as the person's name with 50% opacity
  2. Review paragraphs inside the quotations have the same color as well,
     but are at 70% opacity */
+
 
     /* Typography */
 
@@ -22,7 +24,9 @@
     --fw-m: 500;
     --fw-l: 600;
 
+    --fs-xs: 0.6875rem;
     --fs-s: 0.8125rem;
+    --fs-m: 20px;
 
     /* Others */
 
@@ -42,8 +46,15 @@
     --padding-sides-responsive: 1.5rem;
     --padding-top-bottom-responsive: 4.5rem;
     --grid-gap-responsive: 1.5rem;
-    --max-width: 31.25rem;
+    --max-width-responsive: 31.25rem;
+    --padding-first-title-responsive: 1.5rem;
 
+    --grid-template-responsive:
+        "Daniel"
+        "Jonathan"
+        "Jeanette"
+        "Patrick"
+        "Kira";
 
     /* Desktop */
 
@@ -94,21 +105,158 @@
 }
 
 /* Global Styles */
+body {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    padding: var(--padding-top-bottom-responsive) var(--padding-sides-responsive);
+    background-color: hsl(var(--clr-hsl-light-blue));
+    font-family: var(--ff-body);
+    font-weight: var(--fw-m);
+    font-size: var(--fs-s);
+    color: hsla(var(--clr-hsl-white), 1);
+}
+
 
 /* Utility Styles */
 
 /* Article Styles */
 
+.testimonial {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas: var(--grid-template-responsive);
+    gap: var(--grid-gap-responsive);
+    max-width: var(--max-width-responsive);
+}
 
-/* Hover */
+.testimonial-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: var(--spacing-xl);
+    gap: var(--spacing-m);
+    --bg-color-hsl: 0, 0%, 100%;
+    background-color: hsla(var(--bg-color-hsl), 1);
+    border-radius: var(--brd-radius);
+    box-shadow: 40px 60px 50px -47px hsla(var(--bg-color-hsl), .25);
+}
+
+.testimonial-card:nth-of-type(1) {
+    --bg-color-hsl: var(--clr-hsl-violet);
+    grid-area: Daniel;
+}
+
+.testimonial-card:nth-of-type(2) {
+    --bg-color-hsl: var(--clr-hsl-dark-gray-blue);
+    grid-area: Jonathan;
+}
+
+.testimonial-card:nth-of-type(3) {
+    --bg-color-hsl: var(--clr-hsl-white);
+    grid-area: Jeanette;
+    color: hsla(var(--clr-hsl-dark-gray-blue), 1)
+}
+
+.testimonial-card:nth-of-type(4) {
+    --bg-color-hsl: var(--clr-hsl-dark-black-blue);
+    grid-area: Patrick;
+}
+
+.testimonial-card:nth-of-type(5) {
+    --bg-color-hsl: var(--clr-hsl-white);
+    grid-area: Kira;
+    color: hsla(var(--clr-hsl-dark-gray-blue), 1)
+}
+
+.testimonial-card-flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+
+.picture {
+    border-radius: 50%;
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.testimonial-card:nth-of-type(1) .picture {
+    border: 2px solid hsl(var(--clr-hsl-light-violet));
+    width: 2rem;
+    height: 2rem;
+}
+
+.testimonial-card:nth-of-type(4) .picture {
+    border: 2px solid hsl(var(--clr-hsl-violet));
+    width: 2rem;
+    height: 2rem;
+}
+
+.testimonial-card-name {
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.testimonial-card-paragraph {
+    opacity: .7;
+}
+
+.card-name-span {
+    opacity: .5;
+    font-size: var(--fs-xs);
+}
+
+.testimonial-card-tittle {
+    font-size: var(--fs-m);
+    font-weight: var(--fw-l);
+    line-height: 1.5rem;
+}
+
+.testimonial-card:nth-of-type(1) .testimonial-card-tittle {
+    padding-bottom: var(--padding-first-title-responsive);
+}
+
+.testimonial-card.quote {
+    background-image: url("./images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right 10%;
+}
+
 
 /* Media Query */
 
-@media (width >=900px) {
+@media (width >=56.25rem) and (width<81.25rem) {
+    :root {
+        --padding-sides-responsive: 7rem;
+        --padding-top-bottom-responsive: 7em;
+        --grid-gap-responsive: 1.5rem;
+        --max-width-responsive: 50rem;
+        --padding-first-title-responsive: 0rem;
+
+        --grid-template-responsive:
+            "Daniel Daniel"
+            "Jonathan Jeanette"
+            "Patrick Kira";
+    }
+}
+
+@media (width >=81.25rem) {
     :root {
         --padding-sides-responsive: 10.25rem;
         --padding-top-bottom-responsive: 10.25em;
         --grid-gap-responsive: 1.875rem;
-        --max-width: 69.375rem;
+        --max-width-responsive: 69.375rem;
+        --padding-first-title-responsive: 0rem;
+
+        --grid-template-responsive:
+            "Daniel Daniel Jonathan Kira"
+            "Jeanette Patrick Patrick Kira";
     }
+
 }
