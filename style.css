@@ -26,7 +26,7 @@
 
     --fs-xs: 0.6875rem;
     --fs-s: 0.8125rem;
-    --fs-m: 20px;
+    --fs-m: 1.25rem;
 
     /* Others */
 
@@ -97,10 +97,6 @@
     /* --fw Verified  500*/
     /* --fw Main P 600 */
     /* --fw Secondary P 500 */
-
-
-
-
 
 }
 
@@ -201,13 +197,15 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    font-size: var(--fs-s);
+    font-weight: var(--fw-m);
 }
 
 .testimonial-card-paragraph {
     opacity: .7;
 }
 
-.card-name-span {
+.card-name-verified {
     opacity: .5;
     font-size: var(--fs-xs);
 }
