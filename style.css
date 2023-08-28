@@ -12,11 +12,6 @@
     --clr-hsl-light-gray: 0, 0%, 81%;
     --clr-hsl-light-blue: 210, 46%, 95%;
 
-    /* 1. "Verified Graduate" has the same color as the person's name with 50% opacity
- 2. Review paragraphs inside the quotations have the same color as well,
-    but are at 70% opacity */
-
-
     /* Typography */
 
     --ff-body: 'Barlow Semi Condensed', sans-serif;
@@ -56,48 +51,6 @@
         "Patrick"
         "Kira";
 
-    /* Desktop */
-
-    /* [Make Responsive] Padding sides Card to Body 10.25remrem */
-    /* [Make Responsive] Padding top-bottom Card to body 10.25rem */
-    /* [Make Responsive] Gap between cards 1.875rem */
-
-    /* Padding inside card 2rem */
-    /* Name to Main P 1.125rem */
-    /* Main P to Secondary P 1rem (except the first one) */
-
-    /* --fs name 13px */
-    /* --fs Verified 11px */
-    /* --fs Main P 20px */
-    /* --fs Secondary P 13px */
-
-    /* --fw name  500*/
-    /* --fw Verified  500*/
-    /* --fw Main P 600 */
-    /* --fw Secondary P 500 */
-
-
-
-    /* Mobile */
-
-    /* [Make Responsive] Padding sides Card to Body 1.5rem */
-    /* [Make Responsive] Padding top-bottom Card to body 4.5rem */
-    /* [Make Responsive] Gap between cards 1.5rem */
-
-    /* Padding inside card 2rem */
-    /* Name to Main P 1.125rem */
-    /* Main P to Secondary P 1rem (except the first one) */
-
-    /* --fs name 13px */
-    /* --fs Verified 11px */
-    /* --fs Main P 20px */
-    /* --fs Secondary P 13px */
-
-    /* --fw name  500*/
-    /* --fw Verified  500*/
-    /* --fw Main P 600 */
-    /* --fw Secondary P 500 */
-
 }
 
 /* Global Styles */
@@ -116,7 +69,7 @@ body {
 
 /* Utility Styles */
 
-/* Article Styles */
+/* Testimonial Styles */
 
 .testimonial {
     display: grid;
@@ -135,6 +88,11 @@ body {
     background-color: hsla(var(--bg-color-hsl), 1);
     border-radius: var(--brd-radius);
     box-shadow: 2.5rem 3.75rem 3.125rem -2.9rem hsla(var(--bg-color-hsl), .3);
+}
+
+.testimonial-card-blockquote {
+    display: grid;
+    gap: var(--spacing-m);
 }
 
 .testimonial-card:nth-of-type(1) {
@@ -201,7 +159,7 @@ body {
     font-weight: var(--fw-m);
 }
 
-.testimonial-card-paragraph {
+.testimonial-card-secondary-quote {
     opacity: .7;
 }
 
@@ -210,13 +168,13 @@ body {
     font-size: var(--fs-xs);
 }
 
-.testimonial-card-tittle {
+.testimonial-card-main-quote {
     font-size: var(--fs-m);
     font-weight: var(--fw-l);
     line-height: 1.5rem;
 }
 
-.testimonial-card:nth-of-type(1) .testimonial-card-tittle {
+.testimonial-card:nth-of-type(1) .testimonial-card-main-quote {
     padding-bottom: var(--padding-first-title-responsive);
 }
 
