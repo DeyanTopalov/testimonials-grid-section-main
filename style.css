@@ -187,7 +187,10 @@ body {
 
 /* Media Query */
 
-@media (width >=56.25rem) and (width<81.25rem) {
+/* @media (width >=56.25rem) and (width<81.25rem) */
+/* Not supported in older browsers */
+
+@media (min-width: 56.25rem) and (max-width: 81.249rem) {
     :root {
         --padding-sides-responsive: 7rem;
         --padding-top-bottom-responsive: 7em;
@@ -202,7 +205,10 @@ body {
     }
 }
 
-@media (width >=81.25rem) {
+/* @media (width >=81.25rem) */
+/* Not supported in older browsers */
+
+@media (min-width: 81.25rem) {
     :root {
         --padding-sides-responsive: 10.25rem;
         --padding-top-bottom-responsive: 10.25em;
